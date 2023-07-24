@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA75DD9C2A6EA38800728824 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DD9B2A6EA38800728824 /* Person.swift */; };
+		AA75DD9E2A6EA41800728824 /* StaffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DD9D2A6EA41800728824 /* StaffView.swift */; };
+		AA75DDA02A6EB9C200728824 /* StaffDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DD9F2A6EB9C200728824 /* StaffDetailView.swift */; };
 		AAD7EDD32A5730DA001D6531 /* Adapciak_PKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EDD22A5730DA001D6531 /* Adapciak_PKApp.swift */; };
 		AAD7EDD52A5730DA001D6531 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EDD42A5730DA001D6531 /* ContentView.swift */; };
 		AAD7EDD72A5730DB001D6531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD7EDD62A5730DB001D6531 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA75DD9B2A6EA38800728824 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		AA75DD9D2A6EA41800728824 /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffView.swift; sourceTree = "<group>"; };
+		AA75DD9F2A6EB9C200728824 /* StaffDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffDetailView.swift; sourceTree = "<group>"; };
 		AAD7EDCF2A5730DA001D6531 /* Adapciak PK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adapciak PK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD7EDD22A5730DA001D6531 /* Adapciak_PKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapciak_PKApp.swift; sourceTree = "<group>"; };
 		AAD7EDD42A5730DA001D6531 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 				AAD7EE1C2A57404E001D6531 /* LogInErrorView.swift */,
 				AAD7EE1F2A57406F001D6531 /* SignInView.swift */,
 				AAD7EE202A574070001D6531 /* SwiftUIImageViewer.swift */,
+				AA75DD9D2A6EA41800728824 /* StaffView.swift */,
+				AA75DD9F2A6EB9C200728824 /* StaffDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			children = (
 				AAD7EE092A573FB7001D6531 /* Timetable.swift */,
 				AAD7EDEF2A573CC3001D6531 /* Announcement.swift */,
+				AA75DD9B2A6EA38800728824 /* Person.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -304,15 +313,18 @@
 				AAD7EDED2A573C8F001D6531 /* ActiveAnnouncement.swift in Sources */,
 				AAD7EE0F2A573FEC001D6531 /* AnnouncementDetailView.swift in Sources */,
 				AAD7EE102A573FEC001D6531 /* AnnouncementListView.swift in Sources */,
+				AA75DD9C2A6EA38800728824 /* Person.swift in Sources */,
 				AAD7EE012A573F00001D6531 /* LinkView.swift in Sources */,
 				AAD7EDD52A5730DA001D6531 /* ContentView.swift in Sources */,
 				AAD7EE142A573FF9001D6531 /* TimetablesListView.swift in Sources */,
 				AAD7EDF52A573DC4001D6531 /* VerificationView.swift in Sources */,
+				AA75DDA02A6EB9C200728824 /* StaffDetailView.swift in Sources */,
 				AAD7EDD32A5730DA001D6531 /* Adapciak_PKApp.swift in Sources */,
 				AAD7EE122A573FEC001D6531 /* AnnouncementForm.swift in Sources */,
 				AAD7EE052A573F45001D6531 /* MainSecureField.swift in Sources */,
 				AAD7EDF32A573D0F001D6531 /* FirebaseViewModel.swift in Sources */,
 				AAD7EE112A573FEC001D6531 /* AnnouncementDetailForm.swift in Sources */,
+				AA75DD9E2A6EA41800728824 /* StaffView.swift in Sources */,
 				AAD7EDFA2A573E11001D6531 /* LocalFileManager.swift in Sources */,
 				AAD7EE0A2A573FB7001D6531 /* Timetable.swift in Sources */,
 			);

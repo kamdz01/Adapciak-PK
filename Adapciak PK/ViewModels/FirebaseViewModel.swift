@@ -14,6 +14,7 @@ class FirebaseViewModel: ObservableObject {
     
     @Published var announcements = [Announcement]()
     @Published var timetables = [Timetable]()
+    @Published var staff = [Person]()
     private let fileManager = LocalFileManager.instance
     private var ifFetched = false
     
@@ -72,6 +73,24 @@ class FirebaseViewModel: ObservableObject {
             }
             self.announcements.sort(by: {$0.date! > $1.date!})
             self.announcements.sort{$0.priority! && !$1.priority!}
+        }
+        
+        db.collection("Staff").addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No staff")
+                return
+            }
+            
+            self.staff = documents.map { (queryDocumentSnapshot) -> Person in
+                let data = queryDocumentSnapshot.data()
+                let id = queryDocumentSnapshot.documentID
+                let name = (data["name"] as? String ?? "").replaceNl()
+                let subTitle = (data["subTitle"] as? String ?? "").replaceNl()
+                let content = (data["content"] as? String ?? "").replaceNl()
+                let image = data["image"] as? String ?? ""
+                let phone = data["phoneNumber"] as? String ?? ""
+                return Person(id: id, name: name, subTitle: subTitle, content: content, image: image, phone: phone)
+            }
         }
         
         db.collection("Images").addSnapshotListener { querySnapshot, error in

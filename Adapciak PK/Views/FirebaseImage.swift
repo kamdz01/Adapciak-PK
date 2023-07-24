@@ -20,6 +20,7 @@ struct FirebaseImage : View {
     @State var image = UIImage()
     @State var ifShown = false
     @State private var isImagePresented = false
+    @State var zoomable = true
     private let fileManager = LocalFileManager.instance
     
     var body: some View {
@@ -31,36 +32,45 @@ struct FirebaseImage : View {
             }
             else {
                 if (!ifError){
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .id(image)
-                        .transition(.scale.animation(.easeOut(duration: 0.15)))
-                        .onTapGesture {
-                            isImagePresented = true
-                        }
-                        .fullScreenCover(isPresented: $isImagePresented) {
-                            ZStack {
-                                SwiftUIImageViewer(image: image)
-                                VStack{
-                                    HStack{
-                                        Spacer()
-                                        ZStack {
-                                            Image(systemName: "xmark")
-                                                .font(.headline)
-                                                .padding(10)
-                                                .background(Color.secondary)
-                                                .clipShape(Circle())
-                                                .onTapGesture {
-                                                    isImagePresented = false
+                    if(zoomable){
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .id(image)
+                            .transition(.scale.animation(.easeOut(duration: 0.15)))
+                            .onTapGesture {
+                                isImagePresented = true
+                            }
+                            .fullScreenCover(isPresented: $isImagePresented) {
+                                ZStack {
+                                    SwiftUIImageViewer(image: image)
+                                    VStack{
+                                        HStack{
+                                            Spacer()
+                                            ZStack {
+                                                Image(systemName: "xmark")
+                                                    .font(.headline)
+                                                    .padding(10)
+                                                    .background(Color.secondary)
+                                                    .clipShape(Circle())
+                                                    .onTapGesture {
+                                                        isImagePresented = false
+                                                    }
                                             }
+                                            .padding(5)
                                         }
-                                        .padding(5)
+                                        Spacer()
                                     }
-                                    Spacer()
                                 }
                             }
-                        }
+                    }
+                    else {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .id(image)
+                            .transition(.scale.animation(.easeOut(duration: 0.15)))
+                    }
                     
                 }
                 else{

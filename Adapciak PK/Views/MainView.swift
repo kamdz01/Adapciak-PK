@@ -41,6 +41,12 @@ struct MainView: View {
                     Text("Harmonogram")
                 }
                 .tag(2)
+            StaffView(tabClicked: $tabClicked)
+                .tabItem {
+                    Image("people-icon")
+                    Text("Kadra")
+                }
+                .tag(3)
             
         }
         .onChange(of: activeAnnouncement.announcement.id){ change in

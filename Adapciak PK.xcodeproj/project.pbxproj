@@ -10,6 +10,7 @@
 		AA75DD9C2A6EA38800728824 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DD9B2A6EA38800728824 /* Person.swift */; };
 		AA75DD9E2A6EA41800728824 /* StaffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DD9D2A6EA41800728824 /* StaffView.swift */; };
 		AA75DDA02A6EB9C200728824 /* StaffDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DD9F2A6EB9C200728824 /* StaffDetailView.swift */; };
+		AA9960D52A6ECF350003A5D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9960D42A6ECF350003A5D2 /* Launch Screen.storyboard */; };
 		AAD7EDD32A5730DA001D6531 /* Adapciak_PKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EDD22A5730DA001D6531 /* Adapciak_PKApp.swift */; };
 		AAD7EDD52A5730DA001D6531 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EDD42A5730DA001D6531 /* ContentView.swift */; };
 		AAD7EDD72A5730DB001D6531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD7EDD62A5730DB001D6531 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		AA75DD9B2A6EA38800728824 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AA75DD9D2A6EA41800728824 /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffView.swift; sourceTree = "<group>"; };
 		AA75DD9F2A6EB9C200728824 /* StaffDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffDetailView.swift; sourceTree = "<group>"; };
+		AA9960D42A6ECF350003A5D2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		AAD7EDCF2A5730DA001D6531 /* Adapciak PK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adapciak PK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD7EDD22A5730DA001D6531 /* Adapciak_PKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapciak_PKApp.swift; sourceTree = "<group>"; };
 		AAD7EDD42A5730DA001D6531 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		AAD7EDE92A573C39001D6531 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA9960D42A6ECF350003A5D2 /* Launch Screen.storyboard */,
 				AAD7EDD42A5730DA001D6531 /* ContentView.swift */,
 				AAD7EE072A573F59001D6531 /* MainView.swift */,
 				AAD7EDF42A573DC4001D6531 /* VerificationView.swift */,
@@ -261,11 +264,11 @@
 			};
 			buildConfigurationList = AAD7EDCA2A5730DA001D6531 /* Build configuration list for PBXProject "Adapciak PK" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = pl;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				pl,
 			);
 			mainGroup = AAD7EDC62A5730DA001D6531;
 			packageReferences = (
@@ -287,6 +290,7 @@
 			files = (
 				AAD7EDDA2A5730DB001D6531 /* Preview Assets.xcassets in Resources */,
 				AAD7EDD72A5730DB001D6531 /* Assets.xcassets in Resources */,
+				AA9960D52A6ECF350003A5D2 /* Launch Screen.storyboard in Resources */,
 				AAD7EE242A574188001D6531 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -437,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -452,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Adapciak PK/Preview Content\"";
@@ -459,9 +464,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = adAPPciak;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -472,6 +479,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kamdz.Adapciak-PK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Adapciak PK/Preview Content\"";
@@ -490,9 +501,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = adAPPciak;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -503,6 +516,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kamdz.Adapciak-PK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -184,9 +184,11 @@ struct AnnouncementViewItem: View {
                                 Text(announcement.subTitle!).font(.title3)
                                     .fontWeight(.medium)
                                     .lineLimit(2)
+                                    .multilineTextAlignment(.leading)
                                 Text(announcement.content!)
                                     .fontWeight(.medium)
                                     .lineLimit(2)
+                                    .multilineTextAlignment(.leading)
                         }
                         else {
                                 HStack {

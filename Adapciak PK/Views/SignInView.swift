@@ -214,9 +214,8 @@ struct SignInView: View {
                 signInErrorMessage = ""
                 loggedIn = true
             }
-            
+            print("LoggedIn: \(loggedIn)")
         }
-        print("LoggedIn: \(loggedIn)")
     }
     
     func signOutUser() {

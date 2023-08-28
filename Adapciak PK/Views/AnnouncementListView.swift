@@ -195,6 +195,7 @@ struct AnnouncementViewItem: View {
                                     VStack {
                                         Text(announcement.title!)
                                             .font(.title2)
+                                            .fontWeight(.medium)
                                             .multilineTextAlignment(.leading)
                                             .lineLimit(2)
                                     }
@@ -210,8 +211,10 @@ struct AnnouncementViewItem: View {
                                 }
                                 .padding(.bottom, 1)
                                 Text(announcement.subTitle!).font(.title3)
+                                    .multilineTextAlignment(.leading)
                                     .lineLimit(2)
                                 Text(announcement.content!)
+                                    .multilineTextAlignment(.leading)
                                     .lineLimit(2)
                         }
                     }

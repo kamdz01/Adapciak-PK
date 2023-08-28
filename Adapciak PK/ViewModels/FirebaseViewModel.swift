@@ -87,7 +87,7 @@ class FirebaseViewModel: ObservableObject {
                 let name = (data["name"] as? String ?? "").replaceNl()
                 let subTitle = (data["subTitle"] as? String ?? "").replaceNl()
                 let content = (data["content"] as? String ?? "").replaceNl()
-                let image = data["image"] as? String ?? ""
+                let image = data["image"] as? String ?? "placeholder.jpg"
                 let phone = data["phoneNumber"] as? String ?? ""
                 return Person(id: id, name: name, subTitle: subTitle, content: content, image: image, phone: phone)
             }

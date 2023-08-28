@@ -42,7 +42,7 @@ struct VerificationView: View {
             else {
                 VStack(spacing: 15){
                     Spacer()
-                    Text("Podaj kod weryfikacyjny wysłany na adres e-mail podany przy zakupie biletu. W przypadku braku maila z kodem skontaktuj się ze sztabem organizacyjnym Rajdu.")
+                    Text("Podaj kod weryfikacyjny wysłany na adres e-mail podany przy wypełnianiu formularza. W przypadku braku maila z kodem skontaktuj się z kadrą Adapciaka.")
                         .font(.title2)
                         .multilineTextAlignment(.center)
                     TextField("Kod weryfikacyjny", text: $verificationEmail)
@@ -59,7 +59,7 @@ struct VerificationView: View {
                             .foregroundColor(.red)
                     }
                     Spacer()
-                    Text("Klikając w przycisk \"Zaloguj\" akceptujesz regulamin Rajdu: ")
+                    Text("Klikając w przycisk \"Zaloguj\" akceptujesz regulamin Adapciaka: ")
                         .multilineTextAlignment(.center)
                     LinkView(link: statuteLink, text: "Link do Regulaminu")
                 }

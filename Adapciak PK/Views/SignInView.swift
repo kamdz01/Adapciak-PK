@@ -104,7 +104,7 @@ struct SignInView: View {
                 LinearGradient(colors: [Color("TabColor"), Color("BGBot")], startPoint: .top, endPoint: .bottom).ignoresSafeArea(.all)
                 VStack(spacing: 15) {
                     Spacer()
-                    Text("Uwaga! Opcja logowania dostępna jest tylko dla Kadry Rajdu. Jeżeli jesteś uczestnikiem, nie musisz się logować.")
+                    Text("Uwaga! Opcja logowania dostępna jest tylko dla Kadry Adapciaka. Jeżeli jesteś uczestnikiem, nie musisz się logować.")
                         .padding()
                     SignInCredentialFields(email: $email, password: $password)
                     Button(action: {

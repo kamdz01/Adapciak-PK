@@ -63,7 +63,7 @@ struct StaffGrid: View{
     @EnvironmentObject var viewModel: FirebaseViewModel
     @Binding var tabClicked: Bool
     
-    let spacing: CGFloat = 20
+    let spacing: CGFloat = 50
     let columnCount = 2
     
     var columns: [GridItem] {
@@ -72,22 +72,24 @@ struct StaffGrid: View{
     
     
     var body: some View{
-        ScrollView {
-            GeometryReader { proxy in
-                LazyVGrid(columns: columns, alignment: .center) {
-                    ForEach(viewModel.staff) { person in
-                        NavigationLink(destination: StaffDetailView(person: person)){
-                            StaffViewItem(person: person)
-                        }
+        GeometryReader { proxy in
+            ScrollView {
+                    LazyVGrid(columns: columns, alignment: .center) {
+                        ForEach(viewModel.staff) { person in
+                            NavigationLink(destination: StaffDetailView(person: person)){
+                                StaffViewItem(person: person)
+                                
+                            }
                             .frame(width: cellWidth(for: proxy.size), height: cellWidth(for: proxy.size))
                             .background(Color("FieldColor"))
                             .cornerRadius(15)
                             .padding()
+                        }
                     }
-                }
+                .padding([.leading, .bottom, .trailing])
             }
+            .padding(.top)
         }
-        .padding(.top)
     }
     
     func cellWidth(for size: CGSize) -> CGFloat {
